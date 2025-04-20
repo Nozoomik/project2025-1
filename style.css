@@ -1,0 +1,268 @@
+* { 
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  -o-box-sizing: border-box; 
+  box-sizing: border-box; 
+  -webkit-transition: .25s ease-in-out; 
+  -moz-transition: .25s ease-in-out; 
+  -o-transition: .25s ease-in-out; 
+  transition: .25s ease-in-out; 
+  margin: 0; 
+  padding: 0; 
+  -webkit-text-size-adjust: none; 
+  } 
+  
+  html,body { 
+  height: 100%; 
+  overflow: hidden; 
+  } 
+  
+  #drawer-toggle { 
+  position: absolute; 
+  opacity: 0; 
+  }
+  
+  #drawer-toggle-label { 
+  -webkit-touch-callout: none; 
+  -webkit-user-select: none; 
+  -khtml-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none; 
+  left: 0px; 
+  height:50px; 
+  width: 50px; 
+  display: block; 
+  position: fixed; 
+  background: rgba(0, 0, 0, 0);
+  z-index: 1; 
+  } 
+  
+  
+  #drawer-toggle-label:before { 
+  content: ''; 
+  display: block; 
+  position: absolute; 
+  height: 2px; 
+  width: 24px; 
+  background: #8d8d8d; 
+  left: 13px; 
+  top: 18px; 
+  box-shadow: 0 6px 0 #8d8d8d, 0 12px 0 #8d8d8d; 
+
+  } 
+
+  header { 
+  width: 100%; 
+  position: fixed; 
+  left: 0px; 
+  background: rgb(39, 37, 37); 
+  padding: 10px 10px 10px 50px; 
+  font-size: 30px; 
+  line-height: 30px; 
+  z-index: 0; 
+  }
+  
+  
+  #drawer { 
+  position: fixed; 
+  top: 0; 
+  left:-300px; 
+  height: 100%; 
+  width: 300px; 
+  background: #000000; 
+  overflow-x: hidden; 
+  overflow-y: scroll; 
+  padding: 20px; 
+  -webkit-overflow-scrolling: touch; 
+  } 
+  
+  
+  #page-content { 
+  margin-left: 0px; 
+  margin-top: 50px; 
+  width: 100%; 
+  height: calc(100% - 50px); 
+  overflow-x:hidden; 
+  overflow-y:scroll; 
+  -webkit-overflow-scrolling: touch; 
+  padding: 20px; 
+  }
+  
+  
+  #drawer-toggle:checked ~ #drawer-toggle-label { 
+  height: 100%; 
+  width: calc(100% - 300px); 
+  background: rgba(255,255,255,.8); 
+  } 
+  
+  #drawer-toggle:checked ~ #drawer-toggle-label, 
+  #drawer-toggle:checked ~ header { 
+  left: 300px; 
+  } 
+  
+  #drawer-toggle:checked ~ #drawer { 
+  left: 0px; 
+  } 
+  
+  #drawer-toggle:checked ~ #page-content { 
+  margin-left: 300px; 
+  }
+  
+  
+  #drawer ul { 
+  list-style-type:none; 
+  } 
+  
+  #drawer ul a { 
+  display:block; 
+  padding:10px; 
+  color:#c7c7c7; 
+  text-decoration:none; 
+  } 
+  
+  #drawer ul a:hover { 
+  color:white; 
+  }  
+  
+  @media all and (max-width:350px) { 
+  
+  #drawer-toggle:checked ~ #drawer-toggle-label { 
+  height: 100%; 
+  width: 50px; 
+  } 
+  
+  #drawer-toggle:checked ~ #drawer-toggle-label, 
+  #drawer-toggle:checked ~ header { 
+  left: calc(100% - 50px); 
+  } 
+  
+  #drawer-toggle:checked ~ #drawer { 
+  width: calc(100% - 50px); 
+  padding: 20px; 
+  } 
+  
+  #drawer-toggle:checked ~ #page-content { 
+  margin-left: calc(100% - 50px); 
+  } 
+  
+  }
+
+  @media (max-width: 600px) {
+    img {
+      float: none;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+  .storage, .text {
+  background-color: #2f2f2f;
+  padding-left: 20px;
+  font-size: 120%;
+  border: 1px solid;
+  border-radius: 15px;
+  padding-left: 10px;
+  background-color: #86a6de;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.name {
+  color: skyblue;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.storage ol {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  color: #082567;
+}
+
+.storage ul {
+  margin-left: 30px;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: url(foto/fon_it.png) no-repeat center center fixed;
+  background-color: #f5f6fb;
+  background-size: cover;
+  backdrop-filter: blur(5px);
+  
+}
+
+header {
+  color: skyblue;
+}
+
+.title {
+  padding: 5px;
+  color:rgb(111, 14, 141);
+}
+
+.text p{
+  color: #000000;
+}
+
+.foto {
+  width: 300px;
+  height: 300px;
+  float: right;
+  margin: 0 5px 5px 5px;
+
+}
+
+.foto2 {
+  float: left;
+  width: 300px;
+  height: 300px;
+}
+
+.shapter1-1 {
+  padding-bottom: 10px;
+}
+
+.txt-chapter1, .txt-chapter2, .txt-chapter3 {
+  background-color: #0a0909;
+  padding-left: 20px;
+  font-size: 120%;
+  border: 1px solid;
+  border-radius: 15px;
+  padding-left: 10px;
+  background-color: #86a6de;
+  display: inline-block;
+  margin-bottom: 10px;  
+  margin-top: 20px;
+  color: #000000;
+}
+
+.txt-chapter1 h2{
+  color:rgb(111, 14, 141);
+} 
+
+.txt-chapter2 h2{
+  color:rgb(111, 14, 141);
+}
+
+
+.txt-chapter3 h2{
+  color:rgb(111, 14, 141);
+}
+
+.txt-chapter1, .txt-chapter2, .txt-chapter3 p{
+  color: black;
+}
+
+
+.txt-chapter1 p {
+  width: 100px;
+  color: #000000;
+}
+
+.text{
+  padding: 10px;
+  display: block;
+}
